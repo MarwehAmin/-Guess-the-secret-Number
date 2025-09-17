@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 { color: #2c3e50; }
+
+  input, select {
+    padding: 8px;
+    font-size: 16px;
+    width: 300px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+  }
+ /* Leaderboard Styles */
+ #leaderboard {
+      list-style: none;
+      padding: 0;
+      max-width: 250px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.85);
+      border: 2px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #leaderboard li {
+      font-size: 18px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  #leaderboard li:last-child {
+      border-bottom: none;
+  }
+
+  /* Highlight the top player */
+  #leaderboard li:first-child {
+      background: gold;
+      font-weight: bold;
+      color: #2c3e50;
+  }
+
+  /* Silver & Bronze for 2nd & 3rd */
+  #leaderboard li:nth-child(2) {
+      background: silver;
+      font-weight: bold;
+  }
+
+  #leaderboard li:nth-child(3) {
+      background: #cd7f32;
+      /* Bronze */
+      font-weight: bold;
+  }
+  button:hover { background: #2980b9; }
+
+  #message { font-size: 18px; margin-top: 15px; font-weight: bold; transition: color 0.3s; }
+
+  #hint { font-style: italic; color: #8e44ad; margin-top: 10px; transition: opacity 0.3s; }
+
+  #tries { font-weight: bold; color: #e74c3c; }
+
+  .flash-green { color: green; animation: flashGreen 0.5s; }
+  @keyframes flashGreen { 0%,100%{color:green}50%{color:lime} }
+
+  .flash-red { color: red; animation: flashRed 0.5s; }
+  @keyframes flashRed { 0%,100%{color:red}50%{color:darkred} }
